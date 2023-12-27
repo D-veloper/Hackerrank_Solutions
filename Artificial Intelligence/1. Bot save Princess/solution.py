@@ -4,27 +4,29 @@ def displayPathtoPrincess(n,grid):
 #print all the moves here
     for i in range(n):
         for j in range(n):
-            if grid[i][j] == 'm':
+            if grid[i][j] == "m":
                 bot_x = i
                 bot_y = j
-            elif grid[i][j] == 'p':
+                
+            elif grid[i][j] == "p":
                 princess_x = i
                 princess_y = j
+    
     x_diff = abs(princess_x - bot_x)
     y_diff = abs(princess_y - bot_y)
     
-    for i in range(1, x_diff + 1):
+    for i in range(x_diff):
         if princess_x > bot_x:
-            print("DOWN\n")
+            print("DOWN")
         elif princess_x < bot_x:
-            print("UP\n")
-    
-    for i in range(1, y_diff + 1):
+            print("UP")
+            
+    for i in range(y_diff):
         if princess_y > bot_y:
-            print("RIGHT\n")
+            print("RIGHT")
         elif princess_y < bot_y:
-            print("LEFT\n")
-
+            print("LEFT")
+            
 m = int(input())
 grid = [] 
 for i in range(0, m): 
