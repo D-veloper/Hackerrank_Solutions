@@ -56,5 +56,8 @@ has no effect on how long the battery lasts. For the first four hours, charge ti
 battery life have a linear relationship where battery life = 2 * hours charged. 
 Past 4 hours of charge, however, battery life is capped at 8 hours."""
 
+# y_pred = x_test * 2 if x_test <= 4 else 8  -- solution
+
+
 
 
